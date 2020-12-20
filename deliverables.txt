@@ -1,0 +1,36 @@
+Script started on Sat 19 Dec 2020 07:35:54 PM EST
+[root@centos246 cis246_final_challenge]# groups eng_admin
+eng_admin : engineering wheel
+[root@centos246 cis246_final_challenge]# groups eng_user_1
+eng_user_1 : engineering
+[root@centos246 cis246_final_challenge]# groups eng_user_2
+eng_user_2 : engineering
+[root@centos246 cis246_final_challenge]# groups eng_sales_admin
+sales_admin : sales wheel
+[root@centos246 cis246_final_challenge]# groups sales_user_1
+sales_user_1 : sales
+[root@centos246 cis246_final_challenge]# groups sales_user_2
+sales_user_2 : sales
+[root@centos246 cis246_final_challenge]# groups is_admin
+is_admin : is wheel
+[root@centos246 cis246_final_challenge]# groups is_user_1
+is_user_1 : is
+[root@centos246 cis246_final_challenge]# groups is_user_2
+is_user_2 : is
+[root@centos246 cis246_final_challenge]# ls -ld /engineering_dept/
+drwxrws---. 2 eng_admin engineering 30 Dec 19 18:39 /engineering_dept/
+[root@centos246 cis246_final_challenge]# ls -ld /engineering_dept/confidential.txt 
+-rwxrwS---. 1 root engineering 65 Dec 19 18:42 /engineering_dept/confidential.txt
+[root@centos246 cis246_final_challenge]# cat /engineering_dept/confidential.txt 
+This file contains confidential information for this department.
+[root@centos246 cis246_final_challenge]# ls -ld /sales_dept/
+drwxrws---. 2 sales_admin sales 30 Dec 19 19:19 /sales_dept/
+[root@centos246 cis246_final_challenge]# ls -ld /sales_dept/confidential.txt 
+-rwxrwS---. 1 sales_admin sales 64 Dec 19 19:19 /sales_dept/confidential.txt
+[root@centos246 cis246_final_challenge]# ls -ld /is_dept/
+drwxrws---. 2 is_admin is 30 Dec 19 19:31 /is_dept/
+[root@centos246 cis246_final_challenge]# ls -ld /is_dept/confidential.txt 
+-rwxrwS---. 1 is_admin is 64 Dec 19 19:32 /is_dept/confidential.txt
+[root@centos246 cis246_final_challenge]# exit
+
+Script done on Sat 19 Dec 2020 07:39:16 PM EST
