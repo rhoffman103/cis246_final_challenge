@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+echo "Enter a new department name:"
+read DEPT
+
+sudo groupadd $DEPT || { echo "Department must not already exist!"; exit 1; }
+
+echo "Enter a new user administrator for $DEPT:"
+read USER
+
+sudo useradd -m -g $DEPT $USER || { echo "user already exists!"; exit 1; }
+sudo usermod -aG wheel $USER
+sudo passwd $USER
+
+DIR="/${DEPT}_dept"
+
+sudo mkdir $DIR
+sudo chmod 770 $DIR
+sudo chmod g+s $DIR
+sudo chmod o+s $DIR
+
+sudo chown $USER:$DEPT $DIR
+
+echo "Done."

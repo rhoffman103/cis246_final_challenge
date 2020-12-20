@@ -1,0 +1,32 @@
+Script started on Sat 19 Dec 2020 09:35:47 PM EST
+[bobbyh@centos246 cis246_final_challenge]$ ../bin/create_dir[K[K[Kdeptartment
+bash: ../bin/create_deptartment: No such file or directory
+[bobbyh@centos246 cis246_final_challenge]$ cd ../../bin/
+[bobbyh@centos246 bin]$ ./create_department 
+Enter a new department name:
+development
+[sudo] password for bobbyh: 
+Enter a new user administrator for development:
+dev_admin
+Changing password for user dev_admin.
+New password: 
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+Done.
+[bobbyh@centos246 bin]$ ./create_department
+bash: ./create_department: No such file or directory
+[bobbyh@centos246 bin]$ ./create_department 
+Enter a new department name:
+development
+groupadd: group 'development' already exists
+Department must not already exist!
+[bobbyh@centos246 bin]$ ./create_deptartment 
+Enter a new department name:
+dev_1
+Enter a new user administrator for dev_1:
+dev_admin
+useradd: user 'dev_admin' already exists
+user already exists!
+[bobbyh@centos246 bin]$ exit
+
+Script done on Sat 19 Dec 2020 09:38:36 PM EST
